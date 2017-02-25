@@ -7,7 +7,7 @@ class Link < Post
   end
 
   def read_from_console
-    puts "Адрес ссылка:"
+    puts "Адрес ссылки:"
     @url = STDIN.gets.chomp
   
     puts "Что за ссылка?"

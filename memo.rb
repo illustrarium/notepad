@@ -1,7 +1,7 @@
 class Memo < Post
 
     def read_from_console
-      puts "Новая заметка. Вводи построчно, для окончания дай команду end"
+      puts "Новая заметка. \nВводи построчно. \nДля окончания дай команду end"
 
       @text = []
       line = nil
