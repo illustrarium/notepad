@@ -1,11 +1,23 @@
 class Memo < Post
 
-    def read_fsrom_console
-      #todo
+    def read_from_console
+      puts "Новая заметка. Вводи построчно, для окончания дай команду end"
+
+      @text = []
+      line = nil
+
+      while  line != 'end' do
+         line = STDIN.gets.chomp
+         @text << line
+      end
+
+      @text.pop
     end
 
-    def to_string
-      #todo
+    def to_strings
+      time_string = "Создано: #{@created_at.strftime("%Y-%m-%d, %H:%M:%S")} \n\r \n\r"
+
+      return @text.unshift(time_string)
     end
 
 end     
